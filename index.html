@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+      body {
+        font-family: 'Orbitron', sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      type="text/javascript"
+      src="./js/calculator.js"
+      charset="UTF-8"
+    ></script>
+    <script type="text/javascript">
+      const teclaBase = new Audio('./pokemontecla.mp3');
+      const igualBase = new Audio('./pokemonigual.mp3');
+
+      function playTecla() {
+        const sonido = teclaBase.cloneNode();
+        sonido.play();
+      }
+
+      function playIgual() {
+        const sonido = igualBase.cloneNode();
+        sonido.play();
+      }
+    </script>
+    <title>Calculadora</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="calculadora">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h1>Pikachu Calculator</h1>
+              <div class="calculadora-body">
+                <input type="text" id="screen" class="screen" readonly />
+                <div class="buttons">
+                  <div class="row">
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('7')"
+                    >
+                      7
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('8')"
+                    >
+                      8
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('9')"
+                    >
+                      9
+                    </button>
+                    <button
+                      class="operador"
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('/')"
+                    >
+                      /
+                    </button>
+                  </div>
+                  <div class="row">
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('4')"
+                    >
+                      4
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('5')"
+                    >
+                      5
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('6')"
+                    >
+                      6
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('*')"
+                    >
+                      *
+                    </button>
+                  </div>
+                  <div class="row">
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('1')"
+                    >
+                      1
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('2')"
+                    >
+                      2
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('3')"
+                    >
+                      3
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('-')"
+                    >
+                      -
+                    </button>
+                  </div>
+                  <div class="row">
+                    <button
+                      class="clear"
+                      onmousedown="playTecla()"
+                      onclick="clearScreen()"
+                    >
+                      C
+                    </button>
+                    <button
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('0')"
+                    >
+                      0
+                    </button>
+                    <button
+                      class="igual"
+                      onmousedown="playIgual()"
+                      onclick="calculate()"
+                    >
+                      =
+                    </button>
+                    <button
+                      class="operador"
+                      onmousedown="playTecla()"
+                      onclick="addToScreen('+')"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
