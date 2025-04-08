@@ -123,3 +123,13 @@ button.operador {
   background-color: #fbc02d;
   color: black;
 }
+
+@media (max-width: 768px) {
+ 
+  h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
