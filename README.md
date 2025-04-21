@@ -62,9 +62,7 @@ Calculator/
 
 ## 🧪 Próximas mejoras
 
-- Soporte para teclado físico
 - Transiciones suaves al pulsar botones
-- Ajuste del diseño para móviles
 - Mejora de validaciones en el input
 
 ---
